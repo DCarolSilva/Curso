@@ -1,0 +1,485 @@
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5329)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5909)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2022-10-28 16:34:10 -0700 ===
+- Goodbye!
+Exiting
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:rollback      
+Running via Spring preloader in process 11705
+== 20221028223504 CreateProducts: reverting ===================================
+-- drop_table(:products)
+   -> 0.0050s
+== 20221028223504 CreateProducts: reverted (0.0098s) ==========================
+
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:migrate:status
+Running via Spring preloader in process 11735
+
+database: depot_development
+
+ Status   Migration ID    Migration Name
+--------------------------------------------------
+  down    20221028223504  Create products
+
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:migrate       
+Running via Spring preloader in process 11781
+== 20221028223504 CreateProducts: migrating ===================================
+-- create_table(:products)
+   -> 0.0079s
+== 20221028223504 CreateProducts: migrated (0.0081s) ==========================
+
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:migrate:status
+Running via Spring preloader in process 11811
+
+database: depot_development
+
+ Status   Migration ID    Migration Name
+--------------------------------------------------
+   up     20221028223504  Create products
+
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails s                
+=> Booting Puma
+=> Rails 6.1.7 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.5 (ruby 2.6.6-p146) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 11838
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+Started GET "/products/new" for 127.0.0.1 at 2022-10-28 16:34:46 -0700
+   (1.5ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 6.6ms | Allocations: 3771)
+  Rendered products/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 9980)
+Completed 200 OK in 83ms (Views: 37.3ms | ActiveRecord: 8.2ms | Allocations: 17936)
+
+
+Started POST "/products" for 127.0.0.1 at 2022-10-28 16:35:12 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "descripcion"=>"dvs", "image_url"=>"dsv", "precio"=>"56"}, "commit"=>"Create Product"}
+  TRANSACTION (1.1ms)  BEGIN
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  Product Create (1.8ms)  INSERT INTO "products" ("title", "descripcion", "image_url", "precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", ""], ["descripcion", "dvs"], ["image_url", "dsv"], ["precio", "56.0"], ["created_at", "2022-10-28 23:35:12.505900"], ["updated_at", "2022-10-28 23:35:12.505900"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  TRANSACTION (1.5ms)  COMMIT
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 15ms (ActiveRecord: 4.4ms | Allocations: 2987)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2022-10-28 16:35:12 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Product Load (2.1ms)  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 3506)
+Completed 200 OK in 35ms (Views: 18.4ms | ActiveRecord: 5.8ms | Allocations: 5447)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-10-28 16:35:37 -0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Product Load (2.7ms)  SELECT "products".* FROM "products"
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 4537)
+Completed 200 OK in 34ms (Views: 28.6ms | ActiveRecord: 2.7ms | Allocations: 5094)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2022-10-28 16:35:38 -0700
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.9ms | Allocations: 1332)
+  Rendered products/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1457)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4614)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 5053)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-10-28 16:35:43 -0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Product Load (1.6ms)  SELECT "products".* FROM "products"
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1082)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 4238)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 1.6ms | Allocations: 4685)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2022-10-28 16:35:43 -0700
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 7.4ms | Allocations: 1329)
+  Rendered products/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1454)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4610)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 5040)
+
+
+Started POST "/products" for 127.0.0.1 at 2022-10-28 16:35:44 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "descripcion"=>"", "image_url"=>"", "precio"=>""}, "commit"=>"Create Product"}
+  TRANSACTION (1.2ms)  BEGIN
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  Product Create (1.3ms)  INSERT INTO "products" ("title", "descripcion", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", ""], ["descripcion", ""], ["image_url", ""], ["created_at", "2022-10-28 23:35:44.909027"], ["updated_at", "2022-10-28 23:35:44.909027"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  TRANSACTION (1.1ms)  ROLLBACK
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.6ms | Allocations: 3546)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "precio" violates not-null constraint
+DETAIL:  Failing row contains (2, , , , null, 2022-10-28 23:35:44.909027, 2022-10-28 23:35:44.909027).
+):
+  
+app/controllers/products_controller.rb:27:in `block in create'
+app/controllers/products_controller.rb:26:in `create'
+Started POST "/products" for 127.0.0.1 at 2022-10-28 16:36:14 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "descripcion"=>"", "image_url"=>"", "precio"=>""}, "commit"=>"Create Product"}
+  TRANSACTION (1.1ms)  BEGIN
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  Product Create (1.2ms)  INSERT INTO "products" ("title", "descripcion", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", ""], ["descripcion", ""], ["image_url", ""], ["created_at", "2022-10-28 23:36:14.077958"], ["updated_at", "2022-10-28 23:36:14.077958"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  TRANSACTION (1.1ms)  ROLLBACK
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.4ms | Allocations: 3768)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "precio" violates not-null constraint
+DETAIL:  Failing row contains (3, , , , null, 2022-10-28 23:36:14.077958, 2022-10-28 23:36:14.077958).
+):
+  
+app/controllers/products_controller.rb:27:in `block in create'
+app/controllers/products_controller.rb:26:in `create'
+Started GET "/products" for 127.0.0.1 at 2022-10-28 16:36:18 -0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Product Load (1.5ms)  SELECT "products".* FROM "products"
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4444)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 1.5ms | Allocations: 4923)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2022-10-28 16:36:41 -0700
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.1ms | Allocations: 1408)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4690)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 5128)
+
+
+Started POST "/products" for 127.0.0.1 at 2022-10-28 16:36:45 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "descripcion"=>"", "image_url"=>"", "precio"=>""}, "commit"=>"Create Product"}
+  TRANSACTION (1.0ms)  BEGIN
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  Product Create (1.5ms)  INSERT INTO "products" ("title", "descripcion", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", ""], ["descripcion", ""], ["image_url", ""], ["created_at", "2022-10-28 23:36:45.449444"], ["updated_at", "2022-10-28 23:36:45.449444"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  TRANSACTION (1.2ms)  ROLLBACK
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.8ms | Allocations: 3519)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "precio" violates not-null constraint
+DETAIL:  Failing row contains (4, , , , null, 2022-10-28 23:36:45.449444, 2022-10-28 23:36:45.449444).
+):
+  
+app/controllers/products_controller.rb:27:in `block in create'
+app/controllers/products_controller.rb:26:in `create'
+Started GET "/products" for 127.0.0.1 at 2022-10-28 16:36:51 -0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Product Load (9.5ms)  SELECT "products".* FROM "products"
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 1081)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 4253)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 9.5ms | Allocations: 4621)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2022-10-28 16:37:10 -0700 ===
+- Goodbye!
+Exiting
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails generate migration AdduniquenessToProductTitle
+Running via Spring preloader in process 12040
+      invoke  active_record
+      create    db/migrate/20221028234046_adduniqueness_to_product_title.rb
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:migrate:status                             
+Running via Spring preloader in process 12120
+
+database: depot_development
+
+ Status   Migration ID    Migration Name
+--------------------------------------------------
+   up     20221028223504  Create products
+  down    20221028234046  Adduniqueness to product title
+
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:migrate                                    
+Running via Spring preloader in process 12148
+== 20221028234046 AdduniquenessToProductTitle: migrating ======================
+-- add_index(:products, :title, {:unique=>true})
+   -> 0.0081s
+== 20221028234046 AdduniquenessToProductTitle: migrated (0.0083s) =============
+
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:migrate:status
+Running via Spring preloader in process 12178
+
+database: depot_development
+
+ Status   Migration ID    Migration Name
+--------------------------------------------------
+   up     20221028223504  Create products
+   up     20221028234046  Adduniqueness to product title
+
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails s                                             
+=> Booting Puma
+=> Rails 6.1.7 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.5 (ruby 2.6.6-p146) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 12205
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+Started POST "/products" for 127.0.0.1 at 2022-10-28 16:43:46 -0700
+   (1.8ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"", "descripcion"=>"", "image_url"=>"", "precio"=>""}, "commit"=>"Create Product"}
+  TRANSACTION (2.1ms)  BEGIN
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  Product Create (3.0ms)  INSERT INTO "products" ("title", "descripcion", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", ""], ["descripcion", ""], ["image_url", ""], ["created_at", "2022-10-28 23:43:46.614583"], ["updated_at", "2022-10-28 23:43:46.614583"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  TRANSACTION (1.3ms)  ROLLBACK
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 13.9ms | Allocations: 9708)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "precio" violates not-null constraint
+DETAIL:  Failing row contains (5, , , , null, 2022-10-28 23:43:46.614583, 2022-10-28 23:43:46.614583).
+):
+  
+app/controllers/products_controller.rb:27:in `block in create'
+app/controllers/products_controller.rb:26:in `create'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2022-10-28 16:44:35 -0700 ===
+- Goodbye!
+Exiting
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ sudo npm install -g sass
+[sudo] password for usuario: 
+
+added 17 packages, and audited 18 packages in 8s
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ ls
+app              bin     config.ru  docker-compose.yml  Gemfile.lock  log           package.json       public    README.md  test  vendor
+babel.config.js  config  db         Gemfile             lib           node_modules  postcss.config.js  Rakefile  storage    tmp   yarn.lock
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd sass
+cd: no such file or directory: sass
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd ..                                                                                                                                 1 ↵
+╭─usuario@ubuntu ~/Desktop/Curso ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ mkdir sass
+╭─usuario@ubuntu ~/Desktop/Curso ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd sass
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ code .
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ sass sass/styles.scss
+Error reading sass/styles.scss: no such file or directory.
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ ls                                                                                                                                   66 ↵
+sass  stylesheets
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ sass sass/style.scss
+body {
+  color: red;
+}
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ firefox index.html
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd ..
+╭─usuario@ubuntu ~/Desktop/Curso ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ ls
+depot  rails_demo  ruby  sass
+╭─usuario@ubuntu ~/Desktop/Curso ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd depot
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .ruby-version
+	modified:   config/database.yml
+	modified:   config/routes.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	app/assets/stylesheets/products.scss
+	app/assets/stylesheets/scaffolds.scss
+	app/controllers/products_controller.rb
+	app/helpers/products_helper.rb
+	app/models/product.rb
+	app/views/products/
+	db/migrate/
+	db/schema.rb
+	docker-compose.yml
+	test/controllers/products_controller_test.rb
+	test/fixtures/products.yml
+	test/models/product_test.rb
+	test/system/products_test.rb
+	../sass/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ git add .
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ git commit -m 'detpot'
+[main d9cbcd5] detpot
+ 24 files changed, 446 insertions(+), 4 deletions(-)
+ create mode 100644 depot/app/assets/stylesheets/products.scss
+ create mode 100644 depot/app/assets/stylesheets/scaffolds.scss
+ create mode 100644 depot/app/controllers/products_controller.rb
+ create mode 100644 depot/app/helpers/products_helper.rb
+ create mode 100644 depot/app/models/product.rb
+ create mode 100644 depot/app/views/products/_form.html.erb
+ create mode 100644 depot/app/views/products/_product.json.jbuilder
+ create mode 100644 depot/app/views/products/edit.html.erb
+ create mode 100644 depot/app/views/products/index.html.erb
+ create mode 100644 depot/app/views/products/index.json.jbuilder
+ create mode 100644 depot/app/views/products/new.html.erb
+ create mode 100644 depot/app/views/products/show.html.erb
+ create mode 100644 depot/app/views/products/show.json.jbuilder
+ create mode 100644 depot/db/migrate/20221028223504_create_products.rb
+ create mode 100644 depot/db/migrate/20221028234046_adduniqueness_to_product_title.rb
+ create mode 100644 depot/db/schema.rb
+ create mode 100644 depot/docker-compose.yml
+ create mode 100644 depot/test/controllers/products_controller_test.rb
+ create mode 100644 depot/test/fixtures/products.yml
+ create mode 100644 depot/test/models/product_test.rb
+ create mode 100644 depot/test/system/products_test.rb
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ git push -u origin main
+Enumerating objects: 62, done.
+Counting objects: 100% (60/60), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (40/40), done.
+Writing objects: 100% (43/43), 7.12 KiB | 1.02 MiB/s, done.
+Total 43 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To github.com:DCarolSilva/Curso.git
+   b805559..d9cbcd5  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd ..
+╭─usuario@ubuntu ~/Desktop/Curso ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ ls
+depot  rails_demo  ruby  sass
+╭─usuario@ubuntu ~/Desktop/Curso ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd depot               
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ git status             
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../sass/
+
+nothing added to commit but untracked files present (use "git add" to track)
+╭─usuario@ubuntu ~/Desktop/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd ..
+╭─usuario@ubuntu ~/Desktop/Curso ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd sass
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+nothing added to commit but untracked files present (use "git add" to track)
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ git add .
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ git commit -m 'sass'   
+[main 6d3c704] sass
+ 2 files changed, 18 insertions(+)
+ create mode 100644 sass/sass/style.scss
+ create mode 100644 sass/stylesheets/index.html
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main› 
+╰─$ git push -u origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 679 bytes | 679.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:DCarolSilva/Curso.git
+   d9cbcd5..6d3c704  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main› 
+╰─$ git status             
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+╭─usuario@ubuntu ~/Desktop/Curso/sass ‹ruby-2.6.6@depot› ‹main› 
+╰─$ 
