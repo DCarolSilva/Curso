@@ -1,6 +1,5 @@
 version: '3.9'
 services:
-
   postgresql:
     image: postgres:10.21
     environment:
