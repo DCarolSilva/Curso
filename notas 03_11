@@ -1,0 +1,495 @@
+  Rendered store/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 8.6ms | Allocations: 6615)
+  User Load (1.6ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_menu.html.erb:18
+  Rendered shared/_menu.html.erb (Duration: 3.8ms | Allocations: 1169)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 9878)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 3.0ms | Allocations: 10453)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-11-03 16:32:12 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  User Load (1.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms | Allocations: 1886)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-03 16:32:12 -0700
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Product Load (1.4ms)  SELECT "products".* FROM "products" ORDER BY "products"."title" ASC
+  ↳ app/views/store/index.html.erb:3
+  Rendered store/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 9.4ms | Allocations: 6615)
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 8926)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.4ms | Allocations: 9497)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-03 16:32:18 -0700
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Product Load (1.5ms)  SELECT "products".* FROM "products" ORDER BY "products"."title" ASC
+  ↳ app/views/store/index.html.erb:3
+  Rendered store/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1872)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 6.4ms | Allocations: 6616)
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 8918)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 1.5ms | Allocations: 9488)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-03 16:32:19 -0700
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-03 16:32:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6@depot/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6@depot/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6@depot/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 7.1ms | Allocations: 6641)
+  Rendered shared/_menu.html.erb (Duration: 0.6ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 8362)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 8991)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-03 16:32:21 -0700
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Product Load (1.6ms)  SELECT "products".* FROM "products" ORDER BY "products"."title" ASC
+  ↳ app/views/store/index.html.erb:3
+  Rendered store/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1871)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 9.4ms | Allocations: 6615)
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 8916)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 1.6ms | Allocations: 9496)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2022-11-03 16:39:04 -0700 ===
+- Goodbye!
+Exiting
+╭─usuario@ubuntu ~/Music/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/...........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 13.0.6
+Using concurrent-ruby 1.1.10
+Using i18n 1.12.0
+Using minitest 5.16.3
+Using tzinfo 2.0.5
+Using zeitwerk 2.6.1
+Using activesupport 6.1.7
+Using builder 3.2.4
+Using erubi 1.11.0
+Using mini_portile2 2.8.0
+Using racc 1.6.0
+Using nokogiri 1.13.9 (x86_64-linux)
+Using rails-dom-testing 2.0.3
+Using crass 1.0.6
+Using loofah 2.19.0
+Using rails-html-sanitizer 1.4.3
+Using actionview 6.1.7
+Using rack 2.2.4
+Using rack-test 2.0.2
+Using actionpack 6.1.7
+Using nio4r 2.5.8
+Using websocket-extensions 0.1.5
+Using websocket-driver 0.7.5
+Using actioncable 6.1.7
+Using globalid 1.0.0
+Using activejob 6.1.7
+Using activemodel 6.1.7
+Using activerecord 6.1.7
+Using marcel 1.0.2
+Using mini_mime 1.1.2
+Using activestorage 6.1.7
+Using mail 2.7.1
+Using actionmailbox 6.1.7
+Using actionmailer 6.1.7
+Using actiontext 6.1.7
+Using public_suffix 5.0.0
+Using addressable 2.8.1
+Fetching audited 5.0.2
+Installing audited 5.0.2
+Using execjs 2.8.1
+Using autoprefixer-rails 10.4.7.0
+Using bcrypt 3.1.18
+Using bindex 0.8.1
+Using msgpack 1.6.0
+Using bootsnap 1.13.0
+Using popper_js 2.11.6
+Using method_source 1.0.0
+Using thor 1.2.1
+Using railties 6.1.7
+Using ffi 1.15.5
+Using sassc 2.4.0
+Using sprockets 4.1.1
+Using sprockets-rails 3.4.2
+Using tilt 2.0.11
+Using sassc-rails 2.1.2
+Using bootstrap 5.2.2
+Using bundler 1.17.3
+Using byebug 11.1.3
+Using matrix 0.4.2
+Using regexp_parser 2.6.0
+Using xpath 3.2.0
+Using capybara 3.36.0
+Using childprocess 4.1.0
+Using orm_adapter 0.5.0
+Using responders 3.0.1
+Using warden 1.2.9
+Using devise 4.8.1
+Using diff-lcs 1.5.0
+Using factory_bot 6.2.1
+Using factory_bot_rails 6.2.0
+Using jbuilder 2.11.5
+Using rb-fsevent 0.11.2
+Using rb-inotify 0.10.1
+Using listen 3.7.1
+Using pg 1.4.4
+Using puma 5.6.5
+Using rack-mini-profiler 2.3.4
+Using rack-proxy 0.7.4
+Using rails 6.1.7
+Using rexml 3.2.5
+Using rspec-support 3.12.0
+Using rspec-core 3.12.0
+Using rspec-expectations 3.12.0
+Using rspec-mocks 3.12.0
+Using rspec-rails 6.0.1
+Using rubyzip 2.3.2
+Using sass-rails 6.0.0
+Using selenium-webdriver 4.1.0
+Using semantic_range 3.0.0
+Using spring 3.1.1
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.1
+Using web-console 4.2.0
+Using webdrivers 5.2.0
+Using webpacker 5.4.3
+Bundle complete! 22 Gemfile dependencies, 94 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+╭─usuario@ubuntu ~/Music/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails generate audited:install
+Running via Spring preloader in process 10941
+      create  db/migrate/20221103234020_install_audited.rb
+╭─usuario@ubuntu ~/Music/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:migrate              
+Running via Spring preloader in process 10972
+== 20221103234020 InstallAudited: migrating ===================================
+-- create_table(:audits, {:force=>true})
+   -> 0.0105s
+-- add_index(:audits, [:auditable_type, :auditable_id, :version], {:name=>"auditable_index"})
+   -> 0.0037s
+-- add_index(:audits, [:associated_type, :associated_id], {:name=>"associated_index"})
+   -> 0.0026s
+-- add_index(:audits, [:user_id, :user_type], {:name=>"user_index"})
+   -> 0.0026s
+-- add_index(:audits, :request_uuid)
+   -> 0.0029s
+-- add_index(:audits, :created_at)
+   -> 0.0034s
+== 20221103234020 InstallAudited: migrated (0.0264s) ==========================
+
+╭─usuario@ubuntu ~/Music/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails db:migrate:status       
+Running via Spring preloader in process 11004
+
+database: depot_development
+
+ Status   Migration ID    Migration Name
+--------------------------------------------------
+   up     20221028223440  Create products
+   up     20221028233707  Add uniqueness to product title
+   up     20221101233225  Create carts
+   up     20221101235755  Create line items
+   up     20221103211354  Add quantity to line items
+   up     20221103213538  Combine items in cart
+   up     20221103225847  Create users
+   up     20221103230418  Add devise to users
+   up     20221103234020  Install audited
+
+╭─usuario@ubuntu ~/Music/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ rails s
+=> Booting Puma
+=> Rails 6.1.7 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.5 (ruby 2.6.6-p146) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 11058
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+Started GET "/" for 127.0.0.1 at 2022-11-03 16:42:34 -0700
+   (1.4ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Product Load (1.6ms)  SELECT "products".* FROM "products" ORDER BY "products"."title" ASC
+  ↳ app/views/store/index.html.erb:3
+  Rendered store/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 6089)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 32.5ms | Allocations: 16550)
+  Rendered shared/_menu.html.erb (Duration: 2.7ms | Allocations: 503)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 23800)
+Completed 200 OK in 82ms (Views: 53.6ms | ActiveRecord: 9.2ms | Allocations: 30162)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-03 16:42:37 -0700
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 1057)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-03 16:42:37 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6@depot/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6@depot/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 649)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6@depot/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 6.7ms | Allocations: 6625)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 10241)
+Completed 200 OK in 33ms (Views: 15.9ms | ActiveRecord: 6.7ms | Allocations: 17632)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-11-03 16:42:42 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"dannysilva@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  User Load (1.9ms)  SELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["email", "dannysilva@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/products
+Completed 302 Found in 275ms (ActiveRecord: 4.4ms | Allocations: 5309)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-03 16:42:42 -0700
+Processing by ProductsController#index as HTML
+  User Load (1.6ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Product Load (1.5ms)  SELECT "products".* FROM "products"
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1919)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 10.5ms | Allocations: 6647)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 227)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 9015)
+Completed 200 OK in 29ms (Views: 19.7ms | ActiveRecord: 3.1ms | Allocations: 11421)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2022-11-03 16:42:47 -0700
+Processing by ProductsController#new as HTML
+  User Load (1.4ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 4.4ms | Allocations: 1362)
+  Rendered products/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1749)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 8.8ms | Allocations: 6636)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 225)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 8826)
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 1.4ms | Allocations: 10748)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-03 16:42:53 -0700
+Processing by ProductsController#index as HTML
+  User Load (3.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Product Load (1.3ms)  SELECT "products".* FROM "products"
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 8.3ms | Allocations: 6636)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 8617)
+Completed 200 OK in 32ms (Views: 21.1ms | ActiveRecord: 4.4ms | Allocations: 10400)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-03 16:43:54 -0700
+Processing by ProductsController#index as HTML
+  User Load (1.6ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Product Load (1.3ms)  SELECT "products".* FROM "products"
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1541)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 9.5ms | Allocations: 6636)
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 8615)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 2.9ms | Allocations: 10398)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2022-11-03 16:44:05 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  User Load (1.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  Product Load (1.6ms)  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.5ms | Allocations: 929)
+  Rendered products/edit.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1248)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 7.0ms | Allocations: 6636)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 8325)
+Completed 200 OK in 28ms (Views: 17.2ms | ActiveRecord: 3.1ms | Allocations: 10969)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2022-11-03 16:44:12 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"Galleta Oreo f", "description"=>"Galletas Oreo se caracteriza por estar constituida por dos galletas de chocolate circulares unidas por una <b>crema</b>", "image_url"=>"https://miro.medium.com/max/720/0*APFGTr34fZr4YPvb.jpg", "price"=>"6.0"}, "commit"=>"Guardar", "id"=>"1"}
+  User Load (2.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  Product Load (3.9ms)  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  TRANSACTION (1.6ms)  BEGIN
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  Product Exists? (2.6ms)  SELECT 1 AS one FROM "products" WHERE "products"."title" = $1 AND "products"."id" != $2 LIMIT $3  [["title", "Galleta Oreo f"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+   (2.2ms)  SELECT MAX("audits"."version") FROM "audits" WHERE "audits"."auditable_id" = $1 AND "audits"."auditable_type" = $2  [["auditable_id", 1], ["auditable_type", "Product"]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  Audited::Audit Create (3.1ms)  INSERT INTO "audits" ("auditable_id", "auditable_type", "user_id", "user_type", "action", "audited_changes", "version", "remote_address", "request_uuid", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["auditable_id", 1], ["auditable_type", "Product"], ["user_id", 1], ["user_type", "User"], ["action", "update"], ["audited_changes", "---\ntitle:\n- Galleta Oreo\n- Galleta Oreo f\n"], ["version", 1], ["remote_address", "127.0.0.1"], ["request_uuid", "2f3e5633-9dda-415c-89f8-ded687f13ad1"], ["created_at", "2022-11-03 23:44:12.750898"]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  Product Update (1.4ms)  UPDATE "products" SET "title" = $1, "updated_at" = $2 WHERE "products"."id" = $3  [["title", "Galleta Oreo f"], ["updated_at", "2022-11-03 23:44:12.698241"], ["id", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  TRANSACTION (2.4ms)  COMMIT
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 98ms (ActiveRecord: 26.8ms | Allocations: 27239)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2022-11-03 16:44:12 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  User Load (1.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  Product Load (1.1ms)  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 10.7ms | Allocations: 6640)
+  Rendered shared/_menu.html.erb (Duration: 1.2ms | Allocations: 225)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7429)
+Completed 200 OK in 24ms (Views: 15.8ms | ActiveRecord: 2.1ms | Allocations: 9956)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2022-11-03 16:50:53 -0700 ===
+- Goodbye!
+Exiting
+╭─usuario@ubuntu ~/Music/Curso/depot ‹ruby-2.6.6@depot› ‹main●› 
+╰─$ cd ..
+╭─usuario@ubuntu ~/Music/Curso ‹ruby-2.6.6› ‹main●› 
+╰─$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   depot/Gemfile
+	modified:   depot/Gemfile.lock
+	modified:   depot/app/controllers/application_controller.rb
+	modified:   depot/app/controllers/carts_controller.rb
+	modified:   depot/app/controllers/concerns/current_cart.rb
+	modified:   depot/app/controllers/line_items_controller.rb
+	modified:   depot/app/controllers/store_controller.rb
+	modified:   depot/app/models/cart.rb
+	modified:   depot/app/models/line_item.rb
+	modified:   depot/app/models/product.rb
+	modified:   depot/app/views/carts/show.html.erb
+	modified:   depot/app/views/shared/_menu.html.erb
+	modified:   depot/app/views/store/index.html.erb
+	modified:   depot/config/routes.rb
+	modified:   depot/db/schema.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	depot/app/assets/stylesheets/users.scss
+	depot/app/controllers/users_controller.rb
+	depot/app/helpers/users_helper.rb
+	depot/app/models/user.rb
+	depot/app/views/users/
+	depot/config/initializers/devise.rb
+	depot/config/locales/devise.en.yml
+	depot/db/migrate/20221103211354_add_quantity_to_line_items.rb
+	depot/db/migrate/20221103213538_combine_items_in_cart.rb
+	depot/db/migrate/20221103225847_create_users.rb
+	depot/db/migrate/20221103230418_add_devise_to_users.rb
+	depot/db/migrate/20221103234020_install_audited.rb
+	depot/spec/factories/users.rb
+	depot/spec/helpers/users_helper_spec.rb
+	depot/spec/models/user_spec.rb
+	depot/spec/requests/users_spec.rb
+	depot/spec/routing/users_routing_spec.rb
+	depot/spec/views/users/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+╭─usuario@ubuntu ~/Music/Curso ‹ruby-2.6.6› ‹main●› 
+╰─$ git add . 
+╭─usuario@ubuntu ~/Music/Curso ‹ruby-2.6.6› ‹main●› 
+╰─$ git commit -m 'avance depot 03_11_22'
+[main 3ab75e0] avance depot 03_11_22
+ 43 files changed, 1073 insertions(+), 10 deletions(-)
+ create mode 100644 depot/app/assets/stylesheets/users.scss
+ create mode 100644 depot/app/controllers/users_controller.rb
+ create mode 100644 depot/app/helpers/users_helper.rb
+ create mode 100644 depot/app/models/user.rb
+ create mode 100644 depot/app/views/users/_form.html.erb
+ create mode 100644 depot/app/views/users/_user.json.jbuilder
+ create mode 100644 depot/app/views/users/edit.html.erb
+ create mode 100644 depot/app/views/users/index.html.erb
+ create mode 100644 depot/app/views/users/index.json.jbuilder
+ create mode 100644 depot/app/views/users/new.html.erb
+ create mode 100644 depot/app/views/users/show.html.erb
+ create mode 100644 depot/app/views/users/show.json.jbuilder
+ create mode 100644 depot/config/initializers/devise.rb
+ create mode 100644 depot/config/locales/devise.en.yml
+ create mode 100644 depot/db/migrate/20221103211354_add_quantity_to_line_items.rb
+ create mode 100644 depot/db/migrate/20221103213538_combine_items_in_cart.rb
+ create mode 100644 depot/db/migrate/20221103225847_create_users.rb
+ create mode 100644 depot/db/migrate/20221103230418_add_devise_to_users.rb
+ create mode 100644 depot/db/migrate/20221103234020_install_audited.rb
+ create mode 100644 depot/spec/factories/users.rb
+ create mode 100644 depot/spec/helpers/users_helper_spec.rb
+ create mode 100644 depot/spec/models/user_spec.rb
+ create mode 100644 depot/spec/requests/users_spec.rb
+ create mode 100644 depot/spec/routing/users_routing_spec.rb
+ create mode 100644 depot/spec/views/users/edit.html.erb_spec.rb
+ create mode 100644 depot/spec/views/users/index.html.erb_spec.rb
+ create mode 100644 depot/spec/views/users/new.html.erb_spec.rb
+ create mode 100644 depot/spec/views/users/show.html.erb_spec.rb
+╭─usuario@ubuntu ~/Music/Curso ‹ruby-2.6.6› ‹main› 
+╰─$ git push -u origin main
+Enumerating objects: 109, done.
+Counting objects: 100% (109/109), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (68/68), done.
+Writing objects: 100% (71/71), 19.25 KiB | 1.38 MiB/s, done.
+Total 71 (delta 25), reused 0 (delta 0)
+remote: Resolving deltas: 100% (25/25), completed with 22 local objects.
+To github.com:DCarolSilva/Curso.git
+   95a16a3..3ab75e0  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+╭─usuario@ubuntu ~/Music/Curso ‹ruby-2.6.6› ‹main› 
+╰─$ 
+
