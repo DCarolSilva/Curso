@@ -1,0 +1,495 @@
+  Rendered shared/_header.html.erb (Duration: 3.1ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 10005)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.3ms | Allocations: 12447)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-04 16:15:27 -0700
+Processing by LibraryStoreController#index as HTML
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering library_store/index.html.erb within layouts/application
+  Book Load (0.3ms)  SELECT "books".* FROM "books" ORDER BY "books"."title" ASC
+  ↳ app/views/library_store/index.html.erb:20
+  Rendered library_store/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 995)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 2.4ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 10695)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 12318)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-04 16:15:29 -0700
+Processing by LibraryStoreController#index as HTML
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering library_store/index.html.erb within layouts/application
+  Book Load (0.2ms)  SELECT "books".* FROM "books" ORDER BY "books"."title" ASC
+  ↳ app/views/library_store/index.html.erb:20
+  Rendered library_store/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 994)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 2.9ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 10684)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 0.3ms | Allocations: 12306)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-04 16:15:31 -0700
+Processing by LibraryStoreController#index as HTML
+  User Load (0.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering library_store/index.html.erb within layouts/application
+  Book Load (0.2ms)  SELECT "books".* FROM "books" ORDER BY "books"."title" ASC
+  ↳ app/views/library_store/index.html.erb:20
+  Rendered library_store/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 994)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.4ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 10684)
+Completed 200 OK in 28ms (Views: 20.3ms | ActiveRecord: 0.4ms | Allocations: 12306)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:15:31 -0700
+Processing by BooksController#index as HTML
+  User Load (0.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Book Load (0.2ms)  SELECT "books".* FROM "books"
+  ↳ app/views/books/index.html.erb:16
+  Rendered books/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 2.7ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 10873)
+Completed 200 OK in 22ms (Views: 16.6ms | ActiveRecord: 0.4ms | Allocations: 12479)
+
+
+Started GET "/books/2/edit" for 127.0.0.1 at 2022-11-04 16:15:39 -0700
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Book Load (0.1ms)  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.3ms | Allocations: 1216)
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1507)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.9ms | Allocations: 2584)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 11186)
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 0.2ms | Allocations: 13488)
+
+
+Started PATCH "/books/2" for 127.0.0.1 at 2022-11-04 16:15:46 -0700
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"Cronica de Una Muerte Anunciada", "category"=>"literatura", "year"=>"2005"}, "commit"=>"Update Book", "id"=>"2"}
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Book Load (0.1ms)  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  TRANSACTION (0.1ms)  begin transaction
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+   (0.3ms)  SELECT MAX("audits"."version") FROM "audits" WHERE "audits"."auditable_id" = ? AND "audits"."auditable_type" = ?  [["auditable_id", 2], ["auditable_type", "Book"]]
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  Audited::Audit Create (0.9ms)  INSERT INTO "audits" ("auditable_id", "auditable_type", "user_id", "user_type", "action", "audited_changes", "version", "remote_address", "request_uuid", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["auditable_id", 2], ["auditable_type", "Book"], ["user_id", 1], ["user_type", "User"], ["action", "update"], ["audited_changes", "---\ncategory:\n- jda\n- literatura\n"], ["version", 2], ["remote_address", "127.0.0.1"], ["request_uuid", "17842bcb-bfb2-4ac7-8f33-dab608fb7465"], ["created_at", "2022-11-04 23:15:46.659473"]]
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  Book Update (0.2ms)  UPDATE "books" SET "category" = ?, "updated_at" = ? WHERE "books"."id" = ?  [["category", "literatura"], ["updated_at", "2022-11-04 23:15:46.657185"], ["id", 2]]
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+  TRANSACTION (3.6ms)  commit transaction
+  ↳ app/controllers/books_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/books/2
+Completed 302 Found in 29ms (ActiveRecord: 5.5ms | Allocations: 10709)
+
+
+Started GET "/books/2" for 127.0.0.1 at 2022-11-04 16:15:46 -0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Book Load (0.1ms)  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 127)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.3ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 9808)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 11986)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:15:49 -0700
+Processing by BooksController#index as HTML
+  User Load (0.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Book Load (0.1ms)  SELECT "books".* FROM "books"
+  ↳ app/views/books/index.html.erb:16
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1191)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.0ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 10871)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 12476)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:15:53 -0700
+Processing by BooksController#index as HTML
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Book Load (0.1ms)  SELECT "books".* FROM "books"
+  ↳ app/views/books/index.html.erb:16
+  Rendered books/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 4.9ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 10870)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.3ms | Allocations: 12475)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:16:06 -0700
+Processing by BooksController#index as HTML
+  User Load (0.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Book Load (0.1ms)  SELECT "books".* FROM "books"
+  ↳ app/views/books/index.html.erb:16
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.9ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 10870)
+Completed 200 OK in 27ms (Views: 23.1ms | ActiveRecord: 0.3ms | Allocations: 12475)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:16:08 -0700
+Processing by BooksController#index as HTML
+  User Load (0.2ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Book Load (0.1ms)  SELECT "books".* FROM "books"
+  ↳ app/views/books/index.html.erb:16
+  Rendered books/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 2.5ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.2ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 10870)
+Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 0.3ms | Allocations: 12497)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-11-04 16:16:15 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 1768)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-04 16:16:15 -0700
+Processing by LibraryStoreController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:16:15 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1344)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 13.5ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 11078)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 11739)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-04 16:16:19 -0700
+Processing by LibraryStoreController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:16:20 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.4ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 11058)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 11724)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:16:20 -0700
+Processing by BooksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:16:20 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.5ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 1.3ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 11057)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 11721)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:16:21 -0700
+Processing by BooksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:16:21 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 2.8ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 11057)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 11721)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-04 16:16:21 -0700
+Processing by LibraryStoreController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:16:21 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.3ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 11057)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 11721)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:16:22 -0700
+Processing by BooksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:16:22 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.7ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 11057)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 11722)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:16:25 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"dannysilva@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  User Load (0.2ms)  SELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?  [["email", "dannysilva@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/books
+Completed 302 Found in 265ms (ActiveRecord: 0.2ms | Allocations: 2397)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:16:25 -0700
+Processing by BooksController#index as HTML
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Book Load (0.1ms)  SELECT "books".* FROM "books"
+  ↳ app/views/books/index.html.erb:16
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1191)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.5ms | Allocations: 2585)
+  Rendered shared/_menu.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 10877)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.2ms | Allocations: 12484)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2022-11-04 16:16:42 -0700 ===
+- Goodbye!
+Exiting
+╭─usuario@ubuntu ~/Music/Curso/Library ‹ruby-2.6.6› ‹main› 
+╰─$ rails dbconsole
+SQLite version 3.31.1 2020-01-27 19:55:54
+Enter ".help" for usage hints.
+sqlite> select * from audits;
+1|1|Book|||1|User||create|---
+title: Biología
+category: ciencias
+year: 3
+|1||127.0.0.1|ab9b7f9c-8b75-46f8-8a00-4e7871c5ddcb|2022-11-04 21:06:42.124908
+2|2|Book|||1|User||create|---
+title: Cronica de Una Muerte Anunciada
+category: jda
+year: 2005
+|1||127.0.0.1|e9497b8e-4082-4ccb-b0f8-4b4629de0590|2022-11-04 23:03:06.691940
+3|1|Book|||1|User||update|---
+year:
+- 3
+- 1995
+|2||127.0.0.1|7b4238f3-5a36-49ab-b86e-429dcc17e3ba|2022-11-04 23:11:04.277026
+4|3|Book|||1|User||create|---
+title: 'Prosas '
+category: pemas
+year: 1992
+|1||127.0.0.1|56285bae-5dba-4694-8a4e-054b1903d59c|2022-11-04 23:15:24.793260
+5|2|Book|||1|User||update|---
+category:
+- jda
+- literatura
+|2||127.0.0.1|17842bcb-bfb2-4ac7-8f33-dab608fb7465|2022-11-04 23:15:46.659473
+sqlite> 
+╭─usuario@ubuntu ~/Music/Curso/Library ‹ruby-2.6.6› ‹main› 
+╰─$ rails s
+=> Booting Puma
+=> Rails 6.1.7 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.5 (ruby 2.6.6-p146) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 25411
+* Listening on http://127.0.0.1:3000
+* Listening on http://[::1]:3000
+Use Ctrl-C to stop
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:17:21 -0700
+   (0.4ms)  SELECT sqlite_version(*)
+   (0.2ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+Processing by BooksController#index as HTML
+  User Load (0.6ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Book Load (0.2ms)  SELECT "books".* FROM "books"
+  ↳ app/views/books/index.html.erb:16
+  Rendered books/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4993)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 8.7ms | Allocations: 2745)
+  Rendered shared/_menu.html.erb (Duration: 3.4ms | Allocations: 426)
+  Rendered layout layouts/application.html.erb (Duration: 82.1ms | Allocations: 24767)
+Completed 200 OK in 161ms (Views: 97.9ms | ActiveRecord: 2.6ms | Allocations: 36915)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-11-04 16:17:25 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  User Load (0.1ms)  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.1ms | Allocations: 4465)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-04 16:17:25 -0700
+Processing by LibraryStoreController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 372)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:17:25 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 649)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3225)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 3.0ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 0.4ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 12963)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 14900)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:17:27 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1334)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 4.8ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 1.1ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 11063)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 11739)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-04 16:17:27 -0700
+Processing by LibraryStoreController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:17:27 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 4.2ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 0.9ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 11060)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 11735)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-11-04 16:17:28 -0700
+Processing by BooksController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-04 16:17:28 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered /home/usuario/.rvm/gems/ruby-2.6.6/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_header.html.erb (Duration: 4.1ms | Allocations: 2605)
+  Rendered shared/_menu.html.erb (Duration: 0.7ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 11059)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 11732)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2022-11-04 16:17:33 -0700 ===
+- Goodbye!
+Exiting
+╭─usuario@ubuntu ~/Music/Curso/Library ‹ruby-2.6.6› ‹main› 
+╰─$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+╭─usuario@ubuntu ~/Music/Curso/Library ‹ruby-2.6.6› ‹main› 
+╰─$ 
+╭─usuario@ubuntu ~/Music/Curso/Library ‹ruby-2.6.6› ‹main› 
+╰─$   
