@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_04_204413) do
+ActiveRecord::Schema.define(version: 2022_11_04_205627) do
 
   create_table "audits", force: :cascade do |t|
     t.integer "auditable_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2022_11_04_204413) do
     t.integer "year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["title"], name: "index_books_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|
